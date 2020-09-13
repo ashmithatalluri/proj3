@@ -17,3 +17,4 @@ print(len(tags))
 
 for tag in tags:
 	print(tag['href']) if "/" in tag['href'] else False
+	
