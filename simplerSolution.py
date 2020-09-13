@@ -10,6 +10,10 @@ def get_page(url,soupify=False):
 		return rawtext
 	
 
-url="https://www.w3schools.com/"
+url="https://www.w3schools.com"
 pagesoup=get_page(url,soupify=True)
-print(soup)
+tags=pagesoup.find_all('a')
+print(len(tags))
+
+for tag in tags:
+	print(tag['href']) if "/" in tag['href'] else False
